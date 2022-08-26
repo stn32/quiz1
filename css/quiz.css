@@ -1,0 +1,125 @@
+.quiz1 {
+	padding: 3rem 2rem;
+	border: solid 1px #ccc;
+}
+.q1_item {
+	display: none;
+	white-space: pre-line;
+}
+.q1_item.active {
+	display: block;
+}
+.q1_item > div {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.q1_item > p {
+	margin: 1rem 2rem 2rem 2rem;
+}
+.q1_item > div > input {
+	opacity: 0;
+	height: 1.5rem;
+	width: 100%;
+	z-index: 1;
+}
+.q1_item span {
+	position: absolute;
+	top: 0;
+	left: 2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+	transition: 0.3s;
+	border: solid 1px #ccc;
+	border-radius: 0.3rem;
+}
+.q1_item span::after {
+	content: '✔';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	width: 1.5rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.q1_item > div:hover span {
+	background: #eee;
+	transition: 0.3s;
+}
+.q1_item > div > input:checked ~ span {
+	background-color: #2196F3;
+}
+.q1_item > div > input:checked ~ span::after {
+	display: flex;
+}
+.q1_item > div > p {
+	position: absolute;
+	left: 5rem;
+	margin: 0;
+	line-height: 1.5rem;
+	padding-top: 0.2rem;
+}
+.quiz_item_next {
+	margin: 2rem 2rem;
+	padding: 1rem 2rem;
+	border: none;
+	background: #666;
+	color: #fff;
+	border-radius: 0.5rem;
+}
+.quiz_item_next:hover {
+	background: #999;
+}
+.quiz_item_next.none {
+	display: none;
+}
+.quiz_line {
+	width: auto;
+	height: 3rem;
+	background: #eee;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 2rem;
+}
+.quiz_line.none {
+	display: none;
+}
+.q1_item_end {
+	height: 100%;
+	position: relative;
+	text-align: center;
+	padding: 3rem 0;
+}
+.q1_item_end_img img {
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+}
+.q1_item > .showResultBtn {
+	width: 50%;	
+	margin: 2rem auto;
+	height: 4rem;
+	border-radius: 1rem;
+	border: none;
+}
+.q1_result_page {
+	background: #eee;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	padding: 3rem 1rem;
+	border-radius: 1rem;
+}
+.q1_result_page.none {
+	display: none;
+}
+
+
